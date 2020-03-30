@@ -17,8 +17,9 @@ def index_routes():
 def index_stops(route_id):
     try:
         result = ServiceContainer.subway_data_service().index_stops(route_id=route_id)
-    except ValueError as e:
-        handle_api_error(e)
+    except ValueError:
+        raise ApiError("Invalid route ID", status_code=400)
+
     response = [r.serialize() for r in result]
     return jsonify({"response": response}), 200
 

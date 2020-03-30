@@ -30,7 +30,7 @@ class SubwayDataService:
         if self.is_valid_route(route_id):
             return self.fetch_stops(route_id)
         else:
-            raise ValueError("Invalid route ID")
+            raise ValueError()
 
     @staticmethod
     def fetch_stops(route_id):
