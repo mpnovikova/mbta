@@ -1,8 +1,8 @@
-from dependency_injector.containers import DeclarativeContainer
-from dependency_injector.providers import Singleton, Factory
+import dependency_injector.containers as containers
+import dependency_injector.providers as providers
 
 from services.data.subway import SubwayDataService
 
 
-class ServiceContainer(DeclarativeContainer):
-    subway_data_service = Factory(SubwayDataService)
+class ServiceContainer(containers.DeclarativeContainer):
+    subway_data_service = providers.Factory(SubwayDataService)

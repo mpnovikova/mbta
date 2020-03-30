@@ -12,6 +12,5 @@ def create_app(config=None):
 
 def register_blueprints(app):
     from services.api.subway import subway_api
+
     app.register_blueprint(subway_api)
-
-

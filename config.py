@@ -1,6 +1,6 @@
 class Core(object):
     DEBUG = True
-    MBTA_API = "https://www.mbta.com/developers/v3-api"
+    MBTA_API = "https://api-v3.mbta.com"
 
 
 class Development(Core):
