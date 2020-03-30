@@ -19,4 +19,6 @@ class Stop:
         return self.attributes.get("address")
 
     def serialize(self):
+        # The spec doesn't say which fields specifically need to be returned, so for simplicity let's
+        # use same output format as for the routes
         return "ID: {}, NAME: {}".format(self.id, self.name)

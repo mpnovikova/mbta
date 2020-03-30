@@ -7,6 +7,7 @@ from models.stop import Stop
 
 class SubwayDataService:
     def __init__(self):
+        # pre-fetch routes so tha we can validate against them
         self.routes = self.fetch_routes()
         self.valid_routes = [route.id for route in self.routes]
 
